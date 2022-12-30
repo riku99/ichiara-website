@@ -54,13 +54,21 @@ export default function Home() {
               />
             </Flex>
 
-            <VStack mt={{ base: '12', md: '20' }}>
-              <IntroCard
-                imageSrc={'/search-station-app.png'}
-                title="駅名や建物名、住所で検索できる"
-                subTitle="降りたい場所をすぐに登録しましょう。"
-              />
-            </VStack>
+            <Flex justifyContent="center">
+              <VStack mt={{ base: '12', md: '20' }} px="4" spacing="16">
+                <IntroCard
+                  imageSrc={'/search-station-app.png'}
+                  title="駅名や建物名、住所で検索できる"
+                  subTitle="降りたい場所をすぐに登録しましょう。"
+                />
+
+                <IntroCard
+                  imageSrc="/tap-search-app.png"
+                  title="目的地をタップで登録できる"
+                  subTitle="検索が難しいようなバス停などでも、目的地のタップですぐに登録できます。"
+                />
+              </VStack>
+            </Flex>
           </Box>
         </Box>
       </main>

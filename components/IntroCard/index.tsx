@@ -27,11 +27,14 @@ export const IntroCard = ({ imageSrc, title, subTitle }: Props) => {
 
   return (
     <Flex
-      justifyContent="center"
       alignItems="center"
       flexDirection={{
         base: 'column',
         md: 'row',
+      }}
+      w={{
+        base: '100%',
+        md: '4xl',
       }}
     >
       {isMobile && TitleText}
