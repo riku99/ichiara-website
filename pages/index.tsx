@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Box px="4">
+        <Box>
           <Flex mt="8" justifyContent="center" alignItems="center">
             <Image
               src="/ichiara-white.png"
@@ -27,12 +27,25 @@ export default function Home() {
             </Text>
           </Flex>
 
-          <Text textAlign="center" mt="4" fontWeight="bold" fontSize="2xl">
+          <Text
+            textAlign="center"
+            mt="4"
+            fontWeight="bold"
+            fontSize="2xl"
+            px="4"
+          >
             {'電車、バスで寝過ごさない。乗り過ごさない🌷'}
           </Text>
 
           <Box mt="12">
-            <Flex justifyContent="center">
+            <Flex
+              justifyContent="center"
+              bg="#fafafa"
+              py={{
+                base: '12',
+                md: '16',
+              }}
+            >
               <Image
                 src="/main-app.png"
                 width={200}
@@ -45,6 +58,7 @@ export default function Home() {
               <IntroCard
                 imageSrc={'/search-station-app.png'}
                 title="駅名や建物名、住所で検索できる"
+                subTitle="降りたい場所をすぐに登録しましょう。"
               />
             </VStack>
           </Box>

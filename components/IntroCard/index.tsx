@@ -11,16 +11,18 @@ export const IntroCard = ({ imageSrc, title, subTitle }: Props) => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   const TitleText = (
-    <Text
-      fontWeight="700"
-      fontSize={{
-        base: '1.125rem',
-        md: '2rem',
-      }}
-    >
-      {title}
-      {!!subTitle && <Text>subTitle</Text>}
-    </Text>
+    <>
+      <Text
+        fontWeight="700"
+        fontSize={{
+          base: '1.125rem',
+          md: '2rem',
+        }}
+      >
+        {title}
+      </Text>
+      {!!subTitle && <Text mt="2">{subTitle}</Text>}
+    </>
   );
 
   return (
