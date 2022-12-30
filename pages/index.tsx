@@ -59,7 +59,7 @@ export default function Home() {
                 mt={{ base: '12', md: '20' }}
                 px="4"
                 spacing={{
-                  base: '16',
+                  base: '20',
                   md: '32',
                 }}
               >
@@ -73,6 +73,7 @@ export default function Home() {
                   imageSrc="/tap-search-app.png"
                   title="目的地をタップで登録できる"
                   subTitle="検索が難しいようなバス停などでも、目的地のタップですぐに登録できます。"
+                  imagePosition="right"
                 />
 
                 <IntroCard
@@ -85,6 +86,7 @@ export default function Home() {
                   imageSrc="/detail-app.png"
                   title="いつでも設定を変更できる"
                   subTitle="わかりにくい表示名などはここで変更しましょう。"
+                  imagePosition="right"
                 />
               </VStack>
             </Flex>

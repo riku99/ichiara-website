@@ -5,9 +5,15 @@ type Props = {
   imageSrc: string;
   title: string;
   subTitle?: string;
+  imagePosition?: 'right' | 'left';
 };
 
-export const IntroCard = ({ imageSrc, title, subTitle }: Props) => {
+export const IntroCard = ({
+  imageSrc,
+  title,
+  subTitle,
+  imagePosition = 'left',
+}: Props) => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   const TitleText = (
@@ -21,13 +27,24 @@ export const IntroCard = ({ imageSrc, title, subTitle }: Props) => {
       >
         {title}
       </Text>
-      {!!subTitle && <Text mt="2">{subTitle}</Text>}
+      {!!subTitle && (
+        <Text
+          mt="2"
+          w={{
+            base: '100%',
+            md: '84%',
+          }}
+        >
+          {subTitle}
+        </Text>
+      )}
     </>
   );
 
   return (
     <Flex
       alignItems="center"
+      justifyContent="space-between"
       flexDirection={{
         base: 'column',
         md: 'row',
@@ -39,22 +56,24 @@ export const IntroCard = ({ imageSrc, title, subTitle }: Props) => {
     >
       {isMobile && TitleText}
 
-      <Box
-        mt={{
-          base: '4',
-          md: '0',
-        }}
-      >
-        <Image
-          src={imageSrc}
-          width={320}
-          height={600}
-          alt="アプリ紹介画像"
-          style={{
-            boxShadow: '0 10px 25px 0 rgba(0, 0, 0, .5)',
+      {imagePosition === 'left' && (
+        <Box
+          mt={{
+            base: '8',
+            md: '0',
           }}
-        />
-      </Box>
+        >
+          <Image
+            src={imageSrc}
+            width={320}
+            height={600}
+            alt="アプリ紹介画像"
+            style={{
+              boxShadow: '0 10px 25px 0 rgba(0, 0, 0, .5)',
+            }}
+          />
+        </Box>
+      )}
 
       {!isMobile && (
         <Box
@@ -63,6 +82,25 @@ export const IntroCard = ({ imageSrc, title, subTitle }: Props) => {
           }}
         >
           {TitleText}
+        </Box>
+      )}
+
+      {imagePosition === 'right' && (
+        <Box
+          mt={{
+            base: '8',
+            md: '0',
+          }}
+        >
+          <Image
+            src={imageSrc}
+            width={320}
+            height={600}
+            alt="アプリ紹介画像"
+            style={{
+              boxShadow: '0 10px 25px 0 rgba(0, 0, 0, .5)',
+            }}
+          />
         </Box>
       )}
     </Flex>
