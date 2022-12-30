@@ -41,6 +41,25 @@ export const IntroCard = ({
     </>
   );
 
+  const AppImage = (
+    <Box
+      mt={{
+        base: '8',
+        md: '0',
+      }}
+    >
+      <Image
+        src={imageSrc}
+        width={320}
+        height={600}
+        alt="アプリ紹介画像"
+        style={{
+          boxShadow: '0 10px 25px 0 rgba(0, 0, 0, .5)',
+        }}
+      />
+    </Box>
+  );
+
   return (
     <Flex
       alignItems="center"
@@ -56,24 +75,7 @@ export const IntroCard = ({
     >
       {isMobile && TitleText}
 
-      {imagePosition === 'left' && (
-        <Box
-          mt={{
-            base: '8',
-            md: '0',
-          }}
-        >
-          <Image
-            src={imageSrc}
-            width={320}
-            height={600}
-            alt="アプリ紹介画像"
-            style={{
-              boxShadow: '0 10px 25px 0 rgba(0, 0, 0, .5)',
-            }}
-          />
-        </Box>
-      )}
+      {imagePosition === 'left' && AppImage}
 
       {!isMobile && (
         <Box
@@ -85,24 +87,7 @@ export const IntroCard = ({
         </Box>
       )}
 
-      {imagePosition === 'right' && (
-        <Box
-          mt={{
-            base: '8',
-            md: '0',
-          }}
-        >
-          <Image
-            src={imageSrc}
-            width={320}
-            height={600}
-            alt="アプリ紹介画像"
-            style={{
-              boxShadow: '0 10px 25px 0 rgba(0, 0, 0, .5)',
-            }}
-          />
-        </Box>
-      )}
+      {imagePosition === 'right' && AppImage}
     </Flex>
   );
 };
