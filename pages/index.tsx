@@ -1,6 +1,7 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, VStack } from '@chakra-ui/react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { IntroCard } from '../components/IntroCard';
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
 
       <main>
         <Box px="4">
-          <Flex mt="16" justifyContent="center" alignItems="center">
+          <Flex mt="8" justifyContent="center" alignItems="center">
             <Image
               src="/ichiara-white.png"
               width={90}
@@ -39,6 +40,13 @@ export default function Home() {
                 alt="アプリイメージ"
               />
             </Flex>
+
+            <VStack mt={{ base: '12', md: '20' }}>
+              <IntroCard
+                imageSrc={'/search-station-app.png'}
+                title="駅名や建物名、住所で検索できる"
+              />
+            </VStack>
           </Box>
         </Box>
       </main>
