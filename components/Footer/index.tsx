@@ -20,7 +20,7 @@ export const Footer = () => {
     >
       <Link href="/terms">利用規約</Link>
       <Box mt="4">
-        <Link href="/terms">プライバシーポリシー</Link>
+        <Link href="/privacy">プライバシーポリシー</Link>
       </Box>
     </Box>
   );
