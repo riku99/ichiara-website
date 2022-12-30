@@ -2,6 +2,7 @@ import { Box, Flex, Text, VStack } from '@chakra-ui/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { IntroCard } from '../components/IntroCard';
+import { Layout } from '../components/Layout';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <Layout>
         <Box>
           <Flex mt="8" justifyContent="center" alignItems="center">
             <Image
@@ -92,7 +93,7 @@ export default function Home() {
             </Flex>
           </Box>
         </Box>
-      </main>
+      </Layout>
     </>
   );
 }
