@@ -45,7 +45,15 @@ export const IntroCard = ({ imageSrc, title, subTitle }: Props) => {
           md: '0',
         }}
       >
-        <Image src={imageSrc} width={320} height={600} alt="アプリ紹介画像" />
+        <Image
+          src={imageSrc}
+          width={320}
+          height={600}
+          alt="アプリ紹介画像"
+          style={{
+            boxShadow: '0 10px 25px 0 rgba(0, 0, 0, .5)',
+          }}
+        />
       </Box>
 
       {!isMobile && (
