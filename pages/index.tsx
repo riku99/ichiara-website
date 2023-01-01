@@ -55,6 +55,8 @@ export default function Home() {
           <Box mt="12">
             <Flex
               justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
               bg="#fafafa"
               py={{
                 base: '12',
@@ -67,6 +69,28 @@ export default function Home() {
                 height={400}
                 alt="アプリイメージ"
               />
+              <Box mt="8">
+                <a
+                  href="https://apps.apple.com/jp/app/%E3%81%84%E3%81%A1%E3%82%A2%E3%83%A9/id1662104612?itsct=apps_box_badge&amp;itscg=30200"
+                  style={{
+                    display: 'inline-block',
+                    overflow: 'hidden',
+                    borderRadius: '13px',
+                    width: '230px',
+                    height: '83px',
+                  }}
+                >
+                  <img
+                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83&amp;releaseDate=1672358400?h=cfe5a4bc67ae2fa858b0ed912d1fd4bf"
+                    alt="Download on the App Store"
+                    style={{
+                      borderRadius: '13px',
+                      width: '250px',
+                      height: '83px',
+                    }}
+                  />
+                </a>
+              </Box>
             </Flex>
 
             <Flex justifyContent="center">
